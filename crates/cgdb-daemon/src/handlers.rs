@@ -327,4 +327,4 @@ fn lens_breadcrumb(state: &Arc<Mutex<DaemonState>>, params: &Value) -> Result<Va
     Ok(serde_json::to_value(crumb)?)
 }
 // HANDWRITE-END
-// SPEC-MANAGED: .score/tech_design/projects/cgdb/specs/cgdb-v0-1.md#changes
+// SPEC-MANAGED: .score/tech_design/apps/cgdb/specs/cgdb-v0-1.md#changes

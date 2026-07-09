@@ -145,7 +145,7 @@ pub fn scan(path: &Path) -> Result<Vec<GraphRecord>> {
     Ok(out)
 }
 // HANDWRITE-END
-// SPEC-MANAGED: .score/tech_design/projects/cgdb/specs/cgdb-v0-1.md#changes
+// SPEC-MANAGED: .score/tech_design/apps/cgdb/specs/cgdb-v0-1.md#changes
 
 // HANDWRITE-BEGIN gap="broken-generator:gen-code-stub-uncompilable" tracker="2092" reason="gen-code emitted lens dispatch as free-standing async fns with &self (no impl block), undefined identifiers (nodes/format), empty `#[derive(Subcommand)]` enum without the clap import, and illegal `else if … else if` chains. Replaced with a HANDWRITE block that keeps only the SyncPipeline state machine (cgdb-v0-1 sync pipeline). Lens dispatch + RPC methods now live in cgdb-daemon. Reopen codegen once the logic generator emits valid Rust and the rpc-api generator targets an impl block."
 

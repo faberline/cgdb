@@ -317,4 +317,4 @@ fn list_score_projects(repo_root: &std::path::Path) -> Result<Vec<String>> {
     Ok(out)
 }
 // HANDWRITE-END
-// SPEC-MANAGED: .score/tech_design/projects/cgdb/specs/cgdb-v0-1.md#changes
+// SPEC-MANAGED: .score/tech_design/apps/cgdb/specs/cgdb-v0-1.md#changes

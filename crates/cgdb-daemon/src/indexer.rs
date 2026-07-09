@@ -250,4 +250,4 @@ fn stable_id(kind: &str, file: &str, anchor: &str) -> String {
     format!("{}-{:016x}", kind.to_lowercase(), hash)
 }
 // HANDWRITE-END
-// SPEC-MANAGED: .score/tech_design/projects/cgdb/specs/cgdb-v0-1.md#changes
+// SPEC-MANAGED: .score/tech_design/apps/cgdb/specs/cgdb-v0-1.md#changes

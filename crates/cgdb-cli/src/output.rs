@@ -70,4 +70,4 @@ fn render_impact_mermaid(body: &Value) {
     println!("```");
 }
 // HANDWRITE-END
-// SPEC-MANAGED: .score/tech_design/projects/cgdb/specs/cgdb-v0-1.md#changes
+// SPEC-MANAGED: .score/tech_design/apps/cgdb/specs/cgdb-v0-1.md#changes

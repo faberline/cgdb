@@ -9,7 +9,7 @@ and a JSONL code/spec graph built from registered project sources and tech
 design files. The current implementation is an early local toolchain: it can
 model catalog and graph records, expose daemon RPC methods through CLI verbs,
 and run deterministic graph smoke tests, but the configured workspace gate is
-blocked because `projects/cgdb` is not a root workspace member.
+blocked because `apps/cgdb` is not a root workspace member.
 
 ## Capabilities
 
@@ -31,12 +31,12 @@ Status: blocked
 Required Verification: smoke
 Promise:
 Cgdb provides a local daemon-backed CLI that registers cclab projects, persists project catalog metadata, syncs source and tech-design files into a versioned code/spec graph, and reports daemon/project status through JSON output.
-Gate Inventory: `cargo test -p cgdb-smoke`; `cargo test --manifest-path projects/cgdb/Cargo.toml`; projects/cgdb/tests/smoke.rs; projects/cgdb/crates/cgdb-cli/src/main.rs; projects/cgdb/crates/cgdb-daemon/src/handlers.rs; projects/cgdb/crates/cgdb-daemon/src/indexer.rs
+Gate Inventory: `cargo test -p cgdb-smoke`; `cargo test --manifest-path apps/cgdb/Cargo.toml`; apps/cgdb/tests/smoke.rs; apps/cgdb/crates/cgdb-cli/src/main.rs; apps/cgdb/crates/cgdb-daemon/src/handlers.rs; apps/cgdb/crates/cgdb-daemon/src/indexer.rs
 
 | Work Root | Kind | WI | Impl | Verification | Maturity | Gate / Evidence |
 |---|---|---:|---|---|---|---|
-| CLI daemon lifecycle and project catalog contract | epic | - | partial | failing | smoke | `cargo test -p cgdb-smoke`; projects/cgdb/crates/cgdb-cli/src/main.rs; projects/cgdb/crates/cgdb-daemon/src/handlers.rs |
-| Source and tech-design graph sync contract | epic | - | partial | failing | smoke | `cargo test -p cgdb-smoke`; projects/cgdb/crates/cgdb-daemon/src/indexer.rs; projects/cgdb/crates/cgdb-core/src/graph.rs |
+| CLI daemon lifecycle and project catalog contract | epic | - | partial | failing | smoke | `cargo test -p cgdb-smoke`; apps/cgdb/crates/cgdb-cli/src/main.rs; apps/cgdb/crates/cgdb-daemon/src/handlers.rs |
+| Source and tech-design graph sync contract | epic | - | partial | failing | smoke | `cargo test -p cgdb-smoke`; apps/cgdb/crates/cgdb-daemon/src/indexer.rs; apps/cgdb/crates/cgdb-core/src/graph.rs |
 
 ### Code Spec Query And Lens Views
 
@@ -49,12 +49,12 @@ Status: blocked
 Required Verification: smoke
 Promise:
 Cgdb lets agents query code/spec coverage, inspect impact from spec sections to affected code symbols, and request bounded lens views over graph neighborhoods, with deterministic JSON envelopes and optional Mermaid rendering for lens output.
-Gate Inventory: `cargo test -p cgdb-smoke`; projects/cgdb/tests/smoke.rs; projects/cgdb/crates/cgdb-daemon/src/query.rs; projects/cgdb/crates/cgdb-daemon/src/lens_service.rs; projects/cgdb/crates/cgdb-core/src/lens.rs
+Gate Inventory: `cargo test -p cgdb-smoke`; apps/cgdb/tests/smoke.rs; apps/cgdb/crates/cgdb-daemon/src/query.rs; apps/cgdb/crates/cgdb-daemon/src/lens_service.rs; apps/cgdb/crates/cgdb-core/src/lens.rs
 
 | Work Root | Kind | WI | Impl | Verification | Maturity | Gate / Evidence |
 |---|---|---:|---|---|---|---|
-| Coverage and impact query contract | epic | - | partial | failing | smoke | `cargo test -p cgdb-smoke`; projects/cgdb/crates/cgdb-daemon/src/query.rs |
-| Lens navigation and bounded graph view contract | epic | - | partial | failing | smoke | `cargo test -p cgdb-smoke`; projects/cgdb/crates/cgdb-daemon/src/lens_service.rs; projects/cgdb/crates/cgdb-core/src/lens.rs |
+| Coverage and impact query contract | epic | - | partial | failing | smoke | `cargo test -p cgdb-smoke`; apps/cgdb/crates/cgdb-daemon/src/query.rs |
+| Lens navigation and bounded graph view contract | epic | - | partial | failing | smoke | `cargo test -p cgdb-smoke`; apps/cgdb/crates/cgdb-daemon/src/lens_service.rs; apps/cgdb/crates/cgdb-core/src/lens.rs |
 
 ## Design notes (from the v0 kickoff, 2026-06)
 
