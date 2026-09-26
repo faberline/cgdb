@@ -1,4 +1,26 @@
 # HANDWRITE-BEGIN gap="missing-generator:hand-written:9a18f13f" tracker="2087" reason="Workspace member manifest declaring the cgdb (CLI) and cgdb-daemon (server) binary crates plus shared cgdb-core lib."
+[workspace]
+resolver = "2"
+members = [".", "crates/cgdb-cli", "crates/cgdb-core", "crates/cgdb-daemon"]
+
+[workspace.package]
+authors = ["Chris Cheng <chris.cheng.c4@gmail.com>"]
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/faberline/cgdb"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true
+
+[profile.dev.package."*"]
+opt-level = 2
+
+[profile.test]
+opt-level = 1
+
 [package]
 name = "cgdb-smoke"
 version = "0.0.0"
