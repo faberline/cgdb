@@ -4,7 +4,7 @@ resolver = "2"
 members = [".", "crates/cgdb-cli", "crates/cgdb-core", "crates/cgdb-daemon"]
 
 [workspace.package]
-authors = ["Chris Cheng <chris.cheng.c4@gmail.com>"]
+authors = ["Faberline contributors"]
 edition = "2021"
 license = "MIT"
 repository = "https://github.com/faberline/cgdb"
